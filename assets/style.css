@@ -33,11 +33,26 @@ body {
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    
 }
 .navbar a:hover {
     background-color: rgb(244, 245, 247);
     color:black;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: orange;
+}
+.hello-button {
+    background-color:white;
+    color:black;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 2px double black;
+    text-align: center;
+    display: inline-block;
+    margin: 16px auto;
 }
 header h1 {
     width: 100%;
@@ -59,143 +74,130 @@ header h1 {
 .home span {
     color: orange;
 }
-.icons {
-    margin: 20px 0;
-}
-.icons a {
-    display: inline-flex;
-    margin: 0 10px;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: 2px solid orange;
-    color: orange;
-    border-radius: 50%;
-    padding: 10px;
-    font-size: 1.2em;
-    transition: background-color 0.3s, color 0.3s;
-}
-.icons a:hover {
-    background-color: orange;
-    color: white;
-}
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.photo {
     position: relative;
-    margin: 50px 0;
+    margin-top: 16px;
+}
+.photo img {
+    border-radius: 50%;
+    max-width: 300px;
+    position: relative;
+    z-index: 2;
 }
 .semi-circle {
     position: absolute;
-    width: 200px;
-    height: 100px;
-    background-color: #f0f0f0;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 175px;
+    background-color: orange;
+    border-top-left-radius: 175px;
+    border-top-right-radius: 175px;
     z-index: 1;
 }
-.circular-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 0 25px whitesmoke;
+
+button {
+    padding: 12px 24px;
+    border: none;
+    font-size: 16px;
+    margin-right: 8px;
+    cursor: pointer;
 }
-.btn-group {
-    margin: 20px 0;
+.portfolio {
+    background-color: orange;
+    color: #fff;
 }
-.btn-group a {
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
-    border: 2px double black;
-    background: white;
-    padding: 10px 20px;
-    margin: 0 10px;
-    transition: background-color 0.3s, color 0.3s;
+.hire-me {
+    background-color: #ddd;
+    color: #000;
 }
-.btn-group a:hover {
-    background-color: black;
-    color: white;
+blockquote {
+    max-width: 100%;
+    margin-bottom: 16px;
 }
-.quote {
+.experience {
     text-align: right;
-    margin-top: 20px;
-    font-size: 1.1em;
-    color: grey;
+}
+/*https://symbolonly.com/star-symbols.html*/
+.stars {
+    font-size: 20px;
+    color: orange;
+}
+.home-content{
+    padding:0px 20px;
+    text-align: center;
 }
 /* SERVICES*/
 .content {
-            padding: 100px 20px;
-            text-align: center;
-        }
-        .content h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .services {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .service {
-            flex: 1 1 30%;
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .service img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-        .service h2 {
-            font-size: 1.5em;
-            margin: 10px 0;
-        }
-        .service p {
-            font-size: 1em;
-            color: #666;
-        }
+padding: 40px 20px;
+text-align: center;
+}
+.content h1 {
+font-size: 40px;
+margin-bottom: 20px;
+}
+.services {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.service {
+flex-grow: 2;
+width: 30%;
+margin:20px;
+padding:20px;
+border:1px solid #e0e0e0;
+border-radius: 10px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+.service img {
+max-width: 100%;
+border-radius: 10px;
+}
+.service h2 {
+font-size: 24px;
+margin: 10px 0;
+}
+.service p {
+font-size: 16px;
+color: #666;
+}
 /* contact */
 .contact-form {
-    max-width: 600px;
-    margin:0 250px;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+max-width: 600px;
+margin:0 250px;
+padding: 20px;
+border: 1px solid #e0e0e0;
+border-radius: 10px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .contact-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
+display: block;
+margin-bottom: 10px;
+font-weight: bold;
 }
 .contact-form input, 
 .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    font-size: 1em;
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border: 1px solid #e0e0e0;
+border-radius: 5px;
+font-size: 16px;
 }
 .contact-form button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: black;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
+padding: 10px 20px;
+border-radius: 5px;
+background-color: black;
+color: white;
+font-size: 16px;
+cursor: pointer;
 }
 .contact-form button:hover {
-    background-color: rgb(28, 30, 32);
+background-color: rgb(28, 30, 32);
+}
+@media screen and (max-width:600) {
+    
 }
