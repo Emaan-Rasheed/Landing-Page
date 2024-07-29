@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400
+        ..700&display=swap" rel="stylesheet">
+       <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <title>Resume</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; 
+        }
+        header {
+            background-image: url(assets/Images/bgR.jpg);
+            background-repeat: no-repeat;
+            width: auto;
+            height: 100vh;
+        }
+        .navbar, .project-nav {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            padding: 5px 10px;
+        }
+        .navbar a, .project-nav a {
+            text-decoration: none;
+            color: black;
+            padding: 5px 10px;
+            font-family: "Bona Nova SC", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .project-nav a:hover{
+            color:#5A67D8;
+        }
+        header h1 {
+            font-family: 'Times New Roman';
+            font-weight: 400;
+            font-style: normal;
+            font-size: 50px;
+            padding: 0px 35px ;
+            align-items: center;
+        }
+        header h2 {
+            font-size: larger;
+            padding: 30px 520px;
+            align-items: center;  
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+        }
+        .text {
+            flex: 1;
+        }
+        .text h1 {
+            font-size: 48px;
+            margin: 0;
+            line-height: 1;
+        }
+        .text p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 20px 0;
+        }
+        .text .number {
+            font-size: 24px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .text .signature {
+            font-size: 24px;
+            margin-top: 50px;
+        }
+        .image {
+            position: relative;
+        }
+        .image img {
+            width: 400px;
+            height: auto;
+            display: block;
+        }
+        .image .border {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: calc(100% + 40px);
+            height: calc(100% + 40px);
+            border: 5px solid #2c3e50;
+        }
+        .experience-section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            border-left: 2px solid #333;
+        }
+        .timeline-event {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        .timeline-icon {
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+        .timeline-content {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .date-range {
+            display: block;
+            font-size: 0.9em;
+            color: #999;
+            margin-bottom: 5px;
+        }
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: #fff;
+            margin: 50px;
+           
+        }
+        
+        .contact-info {
+            flex: 1;
+            padding-right: 50px;
+        }
+        
+        .contact-info h2 {
+            color: #5A67D8;
+        }
+        
+        .contact-info h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        
+        .contact-info p {
+            font-size: 1.1em;
+            line-height: 1.6em;
+        }
+        
+        .contact-info i {
+            width: 30px;
+            margin-right: 10px;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 15px;
+            font-size: 1.1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: none;
+        }
+        
+        .contact-form button {
+            padding: 15px;
+            font-size: 1.1em;
+            color: #fff;
+            background-color: #5A67D8;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-form button:hover {
+            background-color: #4C51BF;
+        }
+        .Project-images{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 60px;
+        }
+        .item {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(61, 6, 243, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+        }  
+        .item:hover .overlay {
+            opacity: 5;
+        }
+        .text2 {
+            color: white;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#About"><b>About</b></a>
+            <a href="#Experience"><b>Experience</b></a>
+            <a href="#Projects"><b>Projects</b></a>
+            <a href="#Contact"><b>Contact</b></a>
+        </nav>
+        <h2>Ahmed Eissa</h2>
+        <h1><b>UI & <br>UX Designer</b></h1>
+    </header>
+    <section class="about-content" id="About">
+        <div class="text">
+            <div class="number">01</div>
+            <h1>Know <br> About me</h1>
+            <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
+            <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+            <div class="signature">[Signature]</div>
+        </div>
+        <div class="image">
+            <img src="assets/Images/profile-pic.jpg" alt="About Me">
+            <div class="border"></div>
+        </div>
+    </section>
+    <section class="experience-section" id="Experience">
+        <h1>My Experience</h1>
+        <div class="timeline">
+            <div class="timeline-event">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <span class="date-range">April 2016 - Present</span>
+                    <h2>Geil,Danke! GmbH</h2>
+                    <h3 style="margin: 5px 0; font-size: 1em; color: #555;">Projektmanagement mit Scrum</h3>
+                    <h4 style="margin: 5px 0; font-size: 0.9em; color: #888;">Eines Web-Studios</h4>
+                    <p>Ständiges Verbessern des agilen Entwicklungsprozesses beispielsweise durch Grunt, Yeoman, GIT, JIRA und BrowserStack.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <span class="date-range">November 2014 - Mars 2016</span>
+                    <h2 style="margin: 5px 0; font-size: 1.2em;">Freelancer</h2>
+                    <h3>Designer Und Autor</h3>
+                    <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <span class="date-range">April 2014</span>
+                    <h2 style="margin: 5px 0; font-size: 1.2em;">konplan gmbh</h2>
+                    <h3>IT-Consultant</h3>
+                    <p style="margin: 5px 0; font-size: 0.9em; color: #333;">Konzeption und Modellierung von Systemen und APIs für Digital Publishing und Entitlement nach SOA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="project-content" id="Projects">
+        <h1><b>My<br>Projects</b></h1>
+        <nav class="project-nav">
+            <a href="#All"><b>All</b></a>
+            <a href="#Photography"><b>Photography</b></a>
+            <a href="#Logo"><b>Logo</b></a>
+            <a href="#Graphics"><b>Graphics</b></a>
+            <a href="#Advertising"><b>Advertising</b></a>
+            <a href="#Fashion"><b>Fashion</b></a>
+        </nav>
+        <div class="Project-images">
+            <div class="item">
+                <img src="assets/Images/p1.jpg" alt="Image 1">
+                <div class="overlay">
+                    <div class="text2">Mokeups in seconds<br>Fashion/logo</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/Images/p2.jpg" alt="Image 2">
+                <div class="overlay">
+                    <div class="text2">Floating Mockups<br>Ads/Graphics</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/Images/p3.jpg" alt="Image 3">
+                <div class="overlay">
+                    <div class="text2">Photorealistic smartwatch<br>Photography</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/Images/p4.jpg" alt="Image 4">
+                <div class="overlay">
+                    <div class="text2">Hold by Hands<br>Fashion/Ads</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/Images/p5.jpg" alt="Image 5">
+                <div class="overlay">
+                    <div class="text2">Mobile Devices<br>Graphics/Ads</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/Images/p6.jpg" alt="Image 6">
+                <div class="overlay">
+                    <div class="text2">Photorealistic smartwatch<br>Photography</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/Images/p7.jpg" alt="Image 7">
+                <div class="overlay">
+                    <div class="text2">Mobile Devices<br>Graphic/Ads</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/Images/p8.jpg" alt="Image 2">
+                <div class="overlay">
+                    <div class="text2">Mobile Devices<br>Graphic/Ads</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/Images/p9.jpg" alt="Image 8">
+                <div class="overlay">
+                    <div class="text2">Mobile Devices<br>Graphic/Ads</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section" id="Contact">
+        <div class="contact-info">
+            <h2>04</h2>
+            <h1>Contact Me</h1>
+            <p><strong>Phone Number</strong><br>+20 5555 569 42</p>
+            <p><strong>Mobile Numberr</strong><br>+20 5555 569 42</p>
+            <p><strong>Email</strong><br>mail@info.me</p>
+            <p><strong>Social Network</strong><br>
+                <i class="fa-brands fa-facebook" alt="Facebook"></i>
+                <i class="fa-brands fa-twitter" alt="Twitter"></i>
+                <i class="fa-brands fa-square-instagram" alt="Instagram"></i>
+                <i class="fa-brands fa-linkedin" alt="linkedin"></i>
+            </p>
+        </div>
+        <div class="contact-form">
+            <form action="#">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" email="email" placeholder="Your E-mail" required>
+                <input type="tel" phone="phone" placeholder="Phone Number" required>
+                <textarea txt="message" placeholder="Your Message" required></textarea>
+                <button type="submit">SEND</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

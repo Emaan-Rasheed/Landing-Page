@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400
+        ..700&display=swap" rel="stylesheet">
+       <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <title>Resume</title>
+        <style>
+            header {
+                background-image: url(assets/Images/bgR.jpg);
+                background-repeat: no-repeat;
+                width: auto;
+                height: 100vh;
+            }
+            .navbar{
+                width:100%;
+                height:50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:black;
+                padding:5px 10px;
+            }
+            .navbar a{
+                text-decoration: none;
+                color:black;
+                padding:5px 10px;
+                font-family: "Bona Nova SC", serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            header h1{
+                font-family: 'Times New Roman';
+                font-weight: 400;
+                font-style: normal;
+                font-size:80px;
+                padding:0px 35px;
+            }
+            header h2{
+                font-size:larger;
+                padding:20px 35px;
+            }
+            .about-content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            }
+        .text {
+            flex: 1;
+        }
+        .text h1 {
+            font-size: 48px;
+            margin: 0;
+            line-height: 1;
+        }
+        .text p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 20px 0;
+        }
+        .text .number {
+            font-size: 24px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .text .signature {
+            font-size: 24px;
+            margin-top: 50px;
+        }
+        .image {
+            position: relative;
+        }
+        .image img {
+            width: 400px;
+            height: auto;
+            display: block;
+        }
+        .image .border {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: calc(100% + 40px);
+            height: calc(100% + 40px);
+            border: 5px solid #2c3e50;
+        }
+        .experience-section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            border-left: 2px solid #333;
+        }
+        
+        .timeline-event {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+        
+        .timeline-content {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .date-range {
+            display: block;
+            font-size: 0.9em;
+            color: #999;
+            margin-bottom: 5px;
+        }
+        
+
+    
+        </style>
+
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="#About"><b>About</b></a>
+                <a href="#Experience"><b>Experience</b></a>
+                <a href="#Projects"><b>Projects</b></a>
+                <a href="#Contact"><b>Contact</b></a>
+            </nav>
+            <h2> Ahmed Eissa</h2>
+            <h1><b>Ui & <br>Ux Designer</b></h1>
+           <!-- <h1 class="animate__animated animate__heartBeat animate__delay-5s 5s">An animated element</h1>-->
+            
+        </header>
+        <section class="about-content">
+            <div class="text">
+                <div class="number">01</div>
+                <h1>Know <br> About me</h1>
+                <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
+                <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+                <div class="signature">[Signature]</div>
+            </div>
+            <div class="image">
+                <img src="" alt="About Me">
+                <div class="border"></div>
+            </div>
+            <section class="experience-section">
+                <h1>My Experience</h1>
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-content">
+                            <span class="date-range">April 2016 - Present</span>
+                            <h2>Geil,Danke! GmbH</h2>
+                            <h3 style="margin: 5px 0;font-size: 1em;color: #555;">Projektmanagement mit Scrum</h3>
+                            <h4 style=" margin: 5px 0;font-size: 0.9em; color: #888;">Eines Web-Studios</h4>
+                            <p>Ständiges Verbessern des agilen Entwicklungsprozesses beispielsweise durch Grunt, Yeoman, GIT, JIRA und BrowserStack.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-content">
+                            <span class="date-range">November 2014 - Mars 2016</span>
+                            <h2 style=" margin: 5px 0; font-size: 1.2em;">Freelancer</h2>
+                            <h3 >Designer Und Autor</h3>
+                            <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-icon"></div>
+                        <div class="timeline-content">
+                            <span class="date-range">April 2014</span>
+                            <h2 style=" margin: 5px 0; font-size: 1.2em;">konplan gmbh</h2>
+                            <h3>IT-Consultant</h3>
+                            <p style="margin: 5px 0; font-size: 0.9em; color: #333;">Konzeption und Modellierung von Systemen und APIs für Digital Publishing und Entitlement nach SOA.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <section class="Project-content">
+            <h1><b>My<br>Projects</b></h1>
+            <nav class="project-nav">
+                <a href="#All">All</a>
+                <a href="#Photography">Photography</a>
+                <a href="#Logo">Logo</a>
+                <a href="#Graphics">Graphics</a>
+                <a href="#Advertising">Advertising</a>
+                <a href="#Fashion">Fashion</a>
+            </nav>
+        </section>
+        <section class="Contact-content">
+            <h1><b>My<br>Contact</b></h1>
+        </section>
+    </body>
+</html>
